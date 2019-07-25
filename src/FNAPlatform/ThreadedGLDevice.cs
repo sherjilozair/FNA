@@ -262,15 +262,13 @@ namespace Microsoft.Xna.Framework.Graphics
 
 		public void ResetBackbuffer(
 			PresentationParameters presentationParameters,
-			GraphicsAdapter adapter,
-			bool renderTargetBound
+			GraphicsAdapter adapter
 		) {
 			ForceToMainThread(() =>
 			{
 				GLDevice.ResetBackbuffer(
 					presentationParameters,
-					adapter,
-					renderTargetBound
+					adapter
 				);
 			}); // End ForceToMainThread
 		}
@@ -453,24 +451,19 @@ namespace Microsoft.Xna.Framework.Graphics
 			}); // End ForceToMainThread
 		}
 
-		public void SetViewport(Viewport vp, bool renderTargetBound)
+		public void SetViewport(Viewport vp)
 		{
 			ForceToMainThread(() =>
 			{
-				GLDevice.SetViewport(vp, renderTargetBound);
+				GLDevice.SetViewport(vp);
 			}); // End ForceToMainThread
 		}
 
-		public void SetScissorRect(
-			Rectangle scissorRect,
-			bool renderTargetBound
-		) {
+		public void SetScissorRect(Rectangle scissorRect)
+		{
 			ForceToMainThread(() =>
 			{
-				GLDevice.SetScissorRect(
-					scissorRect,
-					renderTargetBound
-				);
+				GLDevice.SetScissorRect(scissorRect);
 			}); // End ForceToMainThread
 		}
 
@@ -492,16 +485,11 @@ namespace Microsoft.Xna.Framework.Graphics
 			}); // End ForceToMainThread
 		}
 
-		public void ApplyRasterizerState(
-			RasterizerState rasterizerState,
-			bool renderTargetBound
-		) {
+		public void ApplyRasterizerState(RasterizerState rasterizerState)
+		{
 			ForceToMainThread(() =>
 			{
-				GLDevice.ApplyRasterizerState(
-					rasterizerState,
-					renderTargetBound
-				);
+				GLDevice.ApplyRasterizerState(rasterizerState);
 			}); // End ForceToMainThread
 		}
 
